@@ -6,7 +6,7 @@
  * @subpackage		WYVF
  * @author			RogerTM
  * @license			license.txt
- * @link			https://themingisprose.com/twenty-em
+ * @link			https://worldyouthvolleyballfestival.com
  * @since 			WYVF 1.0
  */
 
