@@ -11,10 +11,7 @@
  */
 
 /**
- * WYVF Files
- *
- * @since WYVF 1.0
+ * Silents is gold... But we call the others
  */
-require( get_stylesheet_directory() . '/admin/index.php' );
-require( get_stylesheet_directory() . '/inc/index.php' );
+require( get_stylesheet_directory() . '/admin/functions.php' );
 ?>
