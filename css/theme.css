@@ -5118,7 +5118,7 @@ button#maintenance-mode-alert:focus {
 .flex-row {
   flex-direction: row !important; }
 
-.flex-column {
+.flex-column, #top-menu .navbar-collapse {
   flex-direction: column !important; }
 
 .flex-row-reverse {
@@ -5812,7 +5812,9 @@ button#maintenance-mode-alert:focus {
 .my-1 {
   margin-bottom: 0.25rem !important; }
 
-.ml-1, #maintenance-mode #countdowntimer .periodDisplay,
+.ml-1, #maintenance-mode #countdowntimer .periodDisplay, #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
+#top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
+#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link,
 .mx-1 {
   margin-left: 0.25rem !important; }
 
@@ -6046,7 +6048,9 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .mx-15 {
   margin-left: 15rem !important; }
 
-.p-0, #header #header-image .container-fluid, #header #slider-carousel.container-fluid, #colophon {
+.p-0, #header #header-image .container-fluid, #header #slider-carousel.container-fluid, #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
+#top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
+#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link, #colophon {
   padding: 0 !important; }
 
 .pt-0,
@@ -10052,6 +10056,12 @@ article.sticky {
 #top-menu .navbar-brand .custom-logo {
   width: 75px;
   height: auto; }
+#top-menu .navbar-collapse #language {
+  margin-top: -1rem; }
+  #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
+  #top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
+  #comments #top-menu .navbar-collapse #language #cancel-comment-reply-link {
+    font-size: 75%; }
 
 #call_action_one {
   background-size: contain;

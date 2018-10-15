@@ -32,6 +32,17 @@
 				@extend .d-none;
 			}
 		}
+		&-collapse{
+			@extend .flex-column;
+			#language{
+				margin-top: -1rem;
+				.btn{
+					@extend .p-0;
+					@extend .ml-1;
+					font-size: 75%;
+				}
+			}
+		}
 	}
 }
 
