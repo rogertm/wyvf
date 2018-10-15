@@ -18,6 +18,14 @@
 function wyvf_setup(){
 	// Make WYVF available for translation.
 	load_child_theme_textdomain( 'wyvf', get_stylesheet_directory() . '/languages' );
+
+	// Unhook
+	remove_action( 't_em_action_site_info_right', 't_em_display_user_social_network' );
+	remove_action( 't_em_action_site_info_left', 't_em_copy_right' );
+
+	// Hooks
+	add_action( 't_em_action_site_info_before', 't_em_display_user_social_network' );
+	add_action( 't_em_action_site_info_before', 't_em_copy_right' );
 }
 add_action( 'after_setup_theme', 'wyvf_setup' );
 

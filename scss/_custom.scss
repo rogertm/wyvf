@@ -2,3 +2,18 @@
 
 // Your variable overrides
 $icomoon-font-path: 		"../../twenty-em/node_modules/@themingisprose/icon-pack/fonts";
+
+// Fonts
+$font-family-sans-serif:	"Delicious", sans-serif;
+$headings-font-family:		"Chunkfive", sans-serif;
+
+// Spacers
+$spacer:					1rem;
+$spacers: (
+	6: ($spacer * 6),
+	7: ($spacer * 7),
+	8: ($spacer * 8),
+	9: ($spacer * 9),
+	10: ($spacer * 10),
+	15: ($spacer * 15)
+)

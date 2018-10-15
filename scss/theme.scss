@@ -5,3 +5,111 @@
 //
 @import "custom";
 @import "../../twenty-em/scss/theme";
+
+//
+// Navigation
+//
+#top-menu{
+	.navbar{
+		@extend .shadow-lg;
+		@extend .navbar-light;
+		@extend .bg-white;
+		.nav-link{
+			@extend .text-primary;
+			@extend .text-uppercase;
+			@extend .font-weight-bold;
+			@extend .small;
+		}
+		&-nav{
+			@extend .ml-auto;
+		}
+		&-brand{
+			.custom-logo{
+				width: 75px;
+				height: auto;
+			}
+			#site-title{
+				@extend .d-none;
+			}
+		}
+	}
+}
+
+//
+// Call to Actions
+//
+#call_action{
+	&_one{
+		background-size: contain;
+		background-position: right;
+		margin-top: -8rem;
+		@extend .bg-white;
+		@extend .py-10;
+		@extend .px-5;
+		@extend .mb-10;
+		@extend .shadow-lg;
+		.call-action{
+			&-wrapper{
+				@extend .text-body;
+				@extend .w-50;
+				@extend .text-center;
+			}
+			&-headline{
+				@extend .h1;
+			}
+			&-body{
+				@extend .lead;
+			}
+		}
+	}
+	&_two{
+		@extend .py-6;
+		.call-action{
+			&-wrapper{
+				@extend .container;
+				@extend .text-center;
+				@extend .text-body;
+				@extend .font-weight-bold;
+			}
+			&-body{
+				@extend .lead;
+			}
+		}
+	}
+}
+
+//
+// Front Page Widgets
+//
+#featured-widget-area{
+	@extend .text-center;
+	@extend .mb-10;
+	header{
+		@extend .mb-5;
+	}
+	.card{
+		@extend .mx-3;
+		@extend .border-bottom;
+		@extend .border-primary;
+		@extend .border-top-0;
+		@extend .border-left-0;
+		@extend .border-right-0;
+		&-body{
+			@extend .px-0;
+		}
+	}
+}
+
+//
+// Footer
+//
+#footer{
+	@include gradient-x( $success, $info );
+	*{
+		@extend .text-white;
+		@extend .text-center;
+	}
+}
+#colophon{
+	@extend .p-0;
+}
