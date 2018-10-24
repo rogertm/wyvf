@@ -90,6 +90,26 @@
 }
 
 //
+// Content
+//
+.page, .single{
+	article{
+		header{
+			@extend .text-center;
+			@extend .mb-4;
+		}
+	}
+}
+.page-template{
+	.featured-header{
+		header{
+			@extend .text-center;
+			@extend .mb-4;
+		}
+	}
+}
+
+//
 // Front Page Widgets
 //
 #featured-widget-area{

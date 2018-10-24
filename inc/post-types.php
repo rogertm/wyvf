@@ -17,14 +17,23 @@
  */
 function wyvf_cpt(){
 	$post_types = array(
-		'wyvf-group'		=> array(
+		'wyvf-program'		=> array(
 				'post-type'		=> 'wyvf-program',
 				'singular'		=> _x( 'Program', 'post type singular name', 'wyvf' ),
 				'plural'		=> _x( 'Programs', 'post type general name', 'wyvf' ),
 				'hierarchical'	=> false,
 				'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
-				'rewrite'		=> _x( 'program', 'post type slug', 'wyvf' ),
+				'rewrite'		=> _x( 'wyvf-program', 'post type slug', 'wyvf' ),
 				'public'		=> true,
+			),
+		'wyvf-faq'		=> array(
+				'post-type'		=> 'wyvf-faq',
+				'singular'		=> _x( 'FAQ', 'post type singular name', 'wyvf' ),
+				'plural'		=> _x( 'FAQs', 'post type general name', 'wyvf' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor' ),
+				'rewrite'		=> _x( 'wyvf-faq', 'post type slug', 'wyvf' ),
+				'public'		=> false,
 			),
 	);
 
