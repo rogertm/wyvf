@@ -42,6 +42,7 @@ function wyvf_custom_pages(){
 			'public_label'	=> __( 'FAQ', 'wyvf' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'wyvf-faq',
 		),
 		'page_program'	=> array(
 			'value'			=> 'page_program',
@@ -49,6 +50,7 @@ function wyvf_custom_pages(){
 			'public_label'	=> __( 'Program', 'wyvf' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'wyvf-program',
 		),
 	);
 	return apply_filters( 'wyvf_admin_filter_custom_pages', $pages );

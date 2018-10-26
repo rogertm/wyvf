@@ -50,4 +50,32 @@ function wyvf_dequeue(){
 	wp_deregister_style( 'twenty-em-style' );
 }
 add_action( 'wp_enqueue_scripts', 'wyvf_dequeue', 999 );
+
+/**
+ * Redirect post type archive
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_redirect(){
+	$pages = wyvf_custom_pages();
+	$dogo = array();
+	foreach ( $pages as $key => $value ) :
+		if ( $value['post_type'] ) :
+			$args = array(
+				'value'	=> $value['value'],
+				'type'	=> $value['post_type'],
+				'go'	=> t_em( $value['value'] ),
+			);
+			$go = array( $value['post_type'] => $args );
+			$dogo = array_merge( $dogo, array_slice( $go, -1 ) );
+		endif;
+	endforeach;
+
+	foreach ( $dogo as $key => $value ) :
+		if ( is_post_type_archive( $value['type'] ) ) :
+			wp_safe_redirect( get_permalink( $value['go'] ) );
+		endif;
+	endforeach;
+}
+add_action( 'template_redirect', 'wyvf_redirect' );
 ?>
