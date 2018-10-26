@@ -11,6 +11,31 @@
  */
 
 /**
+ * Register Setting
+ * @link http://codex.wordpress.org/Settings_API
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_register_setting_init(){
+	add_settings_field( 'wyvf_custom_content', __( 'Custom Content', 'wyvf' ), 'wyvf_setting_fields_custom_pages', 'twenty-em-options', 'twenty-em-section' );
+}
+add_action( 't_em_admin_action_add_settings_field', 'wyvf_register_setting_init' );
+
+/**
+ * Enqueue styles and scripts
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_admin_enqueue(){
+	$screen = get_current_screen();
+	if ( $screen->id == 'toplevel_page_twenty-em-options' ):
+		wp_register_style( 'style-admin', T_EM_CHILD_THEME_DIR_URL.'/admin/admin.css', false, t_em_theme( 'Version' ), 'all' );
+		wp_enqueue_style( 'style-admin' );
+	endif;
+}
+add_action( 'admin_enqueue_scripts', 'wyvf_admin_enqueue' );
+
+/**
  * Remove unnecessary options
  */
 add_filter( 't_em_admin_filter_header_options_no_header_image', '__return_false' );
@@ -66,6 +91,12 @@ function wyvf_default_theme_options( $default_theme_options ){
 		'front_page_witgets_headline'	=> '',
 	);
 
+	// Get custom pages from the original function
+	foreach ( wyvf_custom_pages() as $pages => $value ) :
+		$key = array( $value['value'] => '' );
+		$wyvf_default_options = array_merge( $wyvf_default_options, array_slice( $key, -1 ) );
+	endforeach;
+
 	$default_options = array_merge( $default_theme_options, $wyvf_default_options );
 
 	return $default_options;
@@ -83,6 +114,14 @@ add_filter( 't_em_admin_filter_default_theme_options', 'wyvf_default_theme_optio
 function wyvf_theme_options_validate( $input ){
 	if ( ! $input )
 		return;
+
+	// Let's go for pages
+	$pages = wyvf_custom_pages();
+	foreach ( $pages as $key => $value ) :
+		if ( array_key_exists( $input[$key['value']], $pages ) ) :
+			$input[$key] = $input[$key['value']];
+		endif;
+	endforeach;
 
 	// Text inputs
 	foreach ( array(
