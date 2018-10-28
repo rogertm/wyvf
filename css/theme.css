@@ -4984,7 +4984,7 @@ button#maintenance-mode-alert:focus {
 .border-right {
   border-right: 1px solid #dee2e6 !important; }
 
-.border-bottom, #featured-widget-area .card, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5 {
+.border-bottom, #featured-widget-area .card, .page article h1:not(.program-title), .page article h2:not(.program-title), .page article h3:not(.program-title), .page article h4:not(.program-title), .page article h5:not(.program-title), .page article h6:not(.program-title), .single article h1:not(.program-title), .single article h2:not(.program-title), .single article h3:not(.program-title), .single article h4:not(.program-title), .single article h5:not(.program-title), .single article h6:not(.program-title) {
   border-bottom: 1px solid #dee2e6 !important; }
 
 .border-left {
@@ -6014,7 +6014,7 @@ article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
 #featured-widget-area .card {
   margin-right: 1rem !important; }
 
-.mb-3, .gallery .gallery-item, #featured-widget-area .front-page-widget, #featured-widget-area.template-jumbotron .front-page-widget .widget-thumbnail, #featured-widget-area.template-features .widget-thumbnail, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5,
+.mb-3, .gallery .gallery-item, #featured-widget-area .front-page-widget, #featured-widget-area.template-jumbotron .front-page-widget .widget-thumbnail, #featured-widget-area.template-features .widget-thumbnail, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer, .page article h1:not(.program-title), .page article h2:not(.program-title), .page article h3:not(.program-title), .page article h4:not(.program-title), .page article h5:not(.program-title), .page article h6:not(.program-title), .single article h1:not(.program-title), .single article h2:not(.program-title), .single article h3:not(.program-title), .single article h4:not(.program-title), .single article h5:not(.program-title), .single article h6:not(.program-title),
 .my-3,
 #header #static-header #static-header-image,
 #header #static-header #static-header-text,
@@ -6067,7 +6067,7 @@ article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
 .m-5 {
   margin: 3rem !important; }
 
-.mt-5, article .author-info, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5,
+.mt-5, article .author-info, .page article h1:not(.program-title), .page article h2:not(.program-title), .page article h3:not(.program-title), .page article h4:not(.program-title), .page article h5:not(.program-title), .page article h6:not(.program-title), .single article h1:not(.program-title), .single article h2:not(.program-title), .single article h3:not(.program-title), .single article h4:not(.program-title), .single article h5:not(.program-title), .single article h6:not(.program-title),
 .my-5,
 #maintenance-mode {
   margin-top: 3rem !important; }
@@ -8389,7 +8389,7 @@ article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
   text-align: right !important; }
 
 .text-center, #site-pagination.prev-next a, #posts-navigation.nav a,
-#comments-navigation.nav a, #site-info, #call_action_one .call-action-wrapper, #call_action_two .call-action-wrapper, #featured-widget-area, .page article header, .single article header, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5, .page-template .featured-header header, #footer * {
+#comments-navigation.nav a, #site-info, #call_action_one .call-action-wrapper, #call_action_two .call-action-wrapper, #featured-widget-area, .page article header, .single article header, .page article h1:not(.program-title), .page article h2:not(.program-title), .page article h3:not(.program-title), .page article h4:not(.program-title), .page article h5:not(.program-title), .page article h6:not(.program-title), .single article h1:not(.program-title), .single article h2:not(.program-title), .single article h3:not(.program-title), .single article h4:not(.program-title), .single article h5:not(.program-title), .single article h6:not(.program-title), .page-template .featured-header header, #footer * {
   text-align: center !important; }
 
 @media (min-width: 576px) {
