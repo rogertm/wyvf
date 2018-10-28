@@ -7,6 +7,13 @@
 @import "../../twenty-em/scss/theme";
 
 //
+// Scaffolding
+//
+.btn{
+	@extend .text-uppercase;
+}
+
+//
 // Navigation
 //
 #top-menu{
@@ -90,26 +97,6 @@
 }
 
 //
-// Content
-//
-.page, .single{
-	article{
-		header{
-			@extend .text-center;
-			@extend .mb-4;
-		}
-	}
-}
-.page-template{
-	.featured-header{
-		header{
-			@extend .text-center;
-			@extend .mb-4;
-		}
-	}
-}
-
-//
 // Front Page Widgets
 //
 #featured-widget-area{
@@ -127,6 +114,60 @@
 		@extend .border-right-0;
 		&-body{
 			@extend .px-0;
+		}
+	}
+}
+
+//
+// Content
+//
+.page, .single{
+	article{
+		header{
+			@extend .text-center;
+			@extend .mb-4;
+			h1{
+				@extend .border-0;
+			}
+		}
+		h1, h2, h3, h4, h5{
+			@extend .text-center;
+			@extend .border-bottom;
+			@extend .mt-5;
+			@extend .mb-3;
+		}
+	}
+}
+.page-template{
+	.featured-header{
+		header{
+			@extend .text-center;
+			@extend .mb-4;
+		}
+	}
+}
+
+//
+// JetPack Contact Form
+//
+.contact-form{
+	@extend .w-75;
+	@extend .mx-auto;
+	> div{
+		@extend .form-group;
+		input, textarea{
+			@extend .form-control;
+			@extend .w-100;
+			@extend .mw-100;
+		}
+		textarea{
+			height: 250px;
+		}
+	}
+	.contact-submit{
+		.pushbutton-wide{
+			@extend .btn;
+			@extend .btn-primary;
 		}
 	}
 }

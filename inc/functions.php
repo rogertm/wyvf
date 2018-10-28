@@ -22,6 +22,12 @@ function wyvf_setup(){
 	// Unhook
 	remove_action( 't_em_action_site_info_right', 't_em_display_user_social_network' );
 	remove_action( 't_em_action_site_info_left', 't_em_copy_right' );
+	remove_action( 't_em_action_post_after', 't_em_single_related_posts' );
+	remove_action( 't_em_action_post_after', 't_em_single_navigation', 5 );
+	remove_action( 'get_the_excerpt', 't_em_custom_excerpt_more' );
+	remove_action( 't_em_action_entry_meta_header', 't_em_post_date' );
+	remove_action( 't_em_action_entry_meta_header', 't_em_post_author' );
+	remove_action( 't_em_action_entry_meta_footer', 't_em_post_shortlink' );
 
 	// Hooks
 	add_action( 't_em_action_site_info_before', 't_em_display_user_social_network' );

@@ -1407,7 +1407,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control {
+.form-control, .contact-form > div input, .contact-form > div textarea {
   display: block;
   width: 100%;
   height: calc(2.25rem + 2px);
@@ -1421,21 +1421,21 @@ pre {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
-    .form-control {
+    .form-control, .contact-form > div input, .contact-form > div textarea {
       transition: none; } }
-  .form-control::-ms-expand {
+  .form-control::-ms-expand, .contact-form > div input::-ms-expand, .contact-form > div textarea::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus {
+  .form-control:focus, .contact-form > div input:focus, .contact-form > div textarea:focus {
     color: #495057;
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .form-control::placeholder {
+  .form-control::placeholder, .contact-form > div input::placeholder, .contact-form > div textarea::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .form-control[readonly] {
+  .form-control:disabled, .contact-form > div input:disabled, .contact-form > div textarea:disabled, .form-control[readonly], .contact-form > div input[readonly], .contact-form > div textarea[readonly] {
     background-color: #e9ecef;
     opacity: 1; }
 
@@ -1499,10 +1499,10 @@ select.form-control:focus::-ms-value {
 select.form-control[size], select.form-control[multiple] {
   height: auto; }
 
-textarea.form-control {
+textarea.form-control, .contact-form > div textarea {
   height: auto; }
 
-.form-group {
+.form-group, .contact-form > div {
   margin-bottom: 1rem; }
 
 .form-text {
@@ -1566,18 +1566,24 @@ textarea.form-control {
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0.25rem; }
 
-.was-validated .form-control:valid, .form-control.is-valid,
+.was-validated .form-control:valid, .was-validated .contact-form > div input:valid, .contact-form > div .was-validated input:valid, .was-validated .contact-form > div textarea:valid, .contact-form > div .was-validated textarea:valid, .form-control.is-valid, .contact-form > div input.is-valid, .contact-form > div textarea.is-valid,
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745; }
-  .was-validated .form-control:valid:focus, .form-control.is-valid:focus,
+  .was-validated .form-control:valid:focus, .was-validated .contact-form > div input:valid:focus, .contact-form > div .was-validated input:valid:focus, .was-validated .contact-form > div textarea:valid:focus, .contact-form > div .was-validated textarea:valid:focus, .form-control.is-valid:focus, .contact-form > div input.is-valid:focus, .contact-form > div textarea.is-valid:focus,
   .was-validated .custom-select:valid:focus,
   .custom-select.is-valid:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback,
-  .was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .contact-form > div input:valid ~ .valid-feedback, .contact-form > div .was-validated input:valid ~ .valid-feedback, .was-validated .contact-form > div textarea:valid ~ .valid-feedback, .contact-form > div .was-validated textarea:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-tooltip,
+  .was-validated .contact-form > div input:valid ~ .valid-tooltip,
+  .contact-form > div .was-validated input:valid ~ .valid-tooltip,
+  .was-validated .contact-form > div textarea:valid ~ .valid-tooltip,
+  .contact-form > div .was-validated textarea:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .contact-form > div input.is-valid ~ .valid-feedback, .contact-form > div textarea.is-valid ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip,
+  .contact-form > div input.is-valid ~ .valid-tooltip,
+  .contact-form > div textarea.is-valid ~ .valid-tooltip,
   .was-validated .custom-select:valid ~ .valid-feedback,
   .was-validated .custom-select:valid ~ .valid-tooltip,
   .custom-select.is-valid ~ .valid-feedback,
@@ -1641,18 +1647,24 @@ textarea.form-control {
   background-color: rgba(220, 53, 69, 0.9);
   border-radius: 0.25rem; }
 
-.was-validated .form-control:invalid, .form-control.is-invalid,
+.was-validated .form-control:invalid, .was-validated .contact-form > div input:invalid, .contact-form > div .was-validated input:invalid, .was-validated .contact-form > div textarea:invalid, .contact-form > div .was-validated textarea:invalid, .form-control.is-invalid, .contact-form > div input.is-invalid, .contact-form > div textarea.is-invalid,
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #dc3545; }
-  .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
+  .was-validated .form-control:invalid:focus, .was-validated .contact-form > div input:invalid:focus, .contact-form > div .was-validated input:invalid:focus, .was-validated .contact-form > div textarea:invalid:focus, .contact-form > div .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, .contact-form > div input.is-invalid:focus, .contact-form > div textarea.is-invalid:focus,
   .was-validated .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback,
-  .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .contact-form > div input:invalid ~ .invalid-feedback, .contact-form > div .was-validated input:invalid ~ .invalid-feedback, .was-validated .contact-form > div textarea:invalid ~ .invalid-feedback, .contact-form > div .was-validated textarea:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-tooltip,
+  .was-validated .contact-form > div input:invalid ~ .invalid-tooltip,
+  .contact-form > div .was-validated input:invalid ~ .invalid-tooltip,
+  .was-validated .contact-form > div textarea:invalid ~ .invalid-tooltip,
+  .contact-form > div .was-validated textarea:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .contact-form > div input.is-invalid ~ .invalid-feedback, .contact-form > div textarea.is-invalid ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip,
+  .contact-form > div input.is-invalid ~ .invalid-tooltip,
+  .contact-form > div textarea.is-invalid ~ .invalid-tooltip,
   .was-validated .custom-select:invalid ~ .invalid-feedback,
   .was-validated .custom-select:invalid ~ .invalid-tooltip,
   .custom-select.is-invalid ~ .invalid-feedback,
@@ -1707,13 +1719,13 @@ textarea.form-control {
       align-items: center;
       justify-content: center;
       margin-bottom: 0; }
-    .form-inline .form-group {
+    .form-inline .form-group, .form-inline .contact-form > div {
       display: flex;
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control {
+    .form-inline .form-control, .form-inline .contact-form > div input, .contact-form > div .form-inline input, .form-inline .contact-form > div textarea, .contact-form > div .form-inline textarea {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -1740,7 +1752,7 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .btn, #commentform .submit, #comments .comment-reply-link,
-#comments #cancel-comment-reply-link {
+#comments #cancel-comment-reply-link, .contact-form .contact-submit .pushbutton-wide {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1755,55 +1767,57 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
     .btn, #commentform .submit, #comments .comment-reply-link,
-    #comments #cancel-comment-reply-link {
+    #comments #cancel-comment-reply-link, .contact-form .contact-submit .pushbutton-wide {
       transition: none; } }
   .btn:hover, #commentform .submit:hover, #comments .comment-reply-link:hover,
-  #comments #cancel-comment-reply-link:hover, .btn:focus, #commentform .submit:focus, #comments .comment-reply-link:focus,
-  #comments #cancel-comment-reply-link:focus {
+  #comments #cancel-comment-reply-link:hover, .contact-form .contact-submit .pushbutton-wide:hover, .btn:focus, #commentform .submit:focus, #comments .comment-reply-link:focus,
+  #comments #cancel-comment-reply-link:focus, .contact-form .contact-submit .pushbutton-wide:focus {
     text-decoration: none; }
   .btn:focus, #commentform .submit:focus, #comments .comment-reply-link:focus,
-  #comments #cancel-comment-reply-link:focus, .btn.focus, #commentform .focus.submit, #comments .focus.comment-reply-link,
-  #comments .focus#cancel-comment-reply-link {
+  #comments #cancel-comment-reply-link:focus, .contact-form .contact-submit .pushbutton-wide:focus, .btn.focus, #commentform .focus.submit, #comments .focus.comment-reply-link,
+  #comments .focus#cancel-comment-reply-link, .contact-form .contact-submit .focus.pushbutton-wide {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .btn.disabled, #commentform .disabled.submit, #comments .disabled.comment-reply-link,
-  #comments .disabled#cancel-comment-reply-link, .btn:disabled, #commentform .submit:disabled, #comments .comment-reply-link:disabled,
-  #comments #cancel-comment-reply-link:disabled {
+  #comments .disabled#cancel-comment-reply-link, .contact-form .contact-submit .disabled.pushbutton-wide, .btn:disabled, #commentform .submit:disabled, #comments .comment-reply-link:disabled,
+  #comments #cancel-comment-reply-link:disabled, .contact-form .contact-submit .pushbutton-wide:disabled {
     opacity: 0.65; }
   .btn:not(:disabled):not(.disabled), #commentform .submit:not(:disabled):not(.disabled), #comments .comment-reply-link:not(:disabled):not(.disabled),
-  #comments #cancel-comment-reply-link:not(:disabled):not(.disabled) {
+  #comments #cancel-comment-reply-link:not(:disabled):not(.disabled), .contact-form .contact-submit .pushbutton-wide:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
 a.btn.disabled, #commentform a.disabled.submit, #comments a.disabled.comment-reply-link,
-#comments a.disabled#cancel-comment-reply-link,
+#comments a.disabled#cancel-comment-reply-link, .contact-form .contact-submit a.disabled.pushbutton-wide,
 fieldset:disabled a.btn,
 fieldset:disabled #commentform a.submit,
 #commentform fieldset:disabled a.submit,
 fieldset:disabled #comments a.comment-reply-link,
 #comments fieldset:disabled a.comment-reply-link,
 fieldset:disabled #comments a#cancel-comment-reply-link,
-#comments fieldset:disabled a#cancel-comment-reply-link {
+#comments fieldset:disabled a#cancel-comment-reply-link,
+fieldset:disabled .contact-form .contact-submit a.pushbutton-wide,
+.contact-form .contact-submit fieldset:disabled a.pushbutton-wide {
   pointer-events: none; }
 
-.btn-primary, #commentform .submit {
+.btn-primary, #commentform .submit, .contact-form .contact-submit .pushbutton-wide {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
-  .btn-primary:hover, #commentform .submit:hover {
+  .btn-primary:hover, #commentform .submit:hover, .contact-form .contact-submit .pushbutton-wide:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc; }
-  .btn-primary:focus, #commentform .submit:focus, .btn-primary.focus, #commentform .focus.submit {
+  .btn-primary:focus, #commentform .submit:focus, .contact-form .contact-submit .pushbutton-wide:focus, .btn-primary.focus, #commentform .focus.submit, .contact-form .contact-submit .focus.pushbutton-wide {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
-  .btn-primary.disabled, #commentform .disabled.submit, .btn-primary:disabled, #commentform .submit:disabled {
+  .btn-primary.disabled, #commentform .disabled.submit, .contact-form .contact-submit .disabled.pushbutton-wide, .btn-primary:disabled, #commentform .submit:disabled, .contact-form .contact-submit .pushbutton-wide:disabled {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-  .btn-primary:not(:disabled):not(.disabled):active, #commentform .submit:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, #commentform .submit:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, #commentform .show > .dropdown-toggle.submit {
+  .btn-primary:not(:disabled):not(.disabled):active, #commentform .submit:not(:disabled):not(.disabled):active, .contact-form .contact-submit .pushbutton-wide:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, #commentform .submit:not(:disabled):not(.disabled).active, .contact-form .contact-submit .pushbutton-wide:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, #commentform .show > .dropdown-toggle.submit, .contact-form .contact-submit .show > .dropdown-toggle.pushbutton-wide {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, #commentform .submit:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, #commentform .submit:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, #commentform .show > .dropdown-toggle.submit:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, #commentform .submit:not(:disabled):not(.disabled):active:focus, .contact-form .contact-submit .pushbutton-wide:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, #commentform .submit:not(:disabled):not(.disabled).active:focus, .contact-form .contact-submit .pushbutton-wide:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, #commentform .show > .dropdown-toggle.submit:focus, .contact-form .contact-submit .show > .dropdown-toggle.pushbutton-wide:focus {
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
 
 .btn-secondary {
@@ -2151,13 +2165,13 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, #commentform .btn-group-lg > .submit, #comments .btn-group-lg > .comment-reply-link,
-#comments .btn-group-lg > #cancel-comment-reply-link {
+#comments .btn-group-lg > #cancel-comment-reply-link, .contact-form .contact-submit .btn-group-lg > .pushbutton-wide {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, #commentform .btn-group-sm > .submit, #comments .comment-reply-link,
+.btn-sm, .btn-group-sm > .btn, #commentform .btn-group-sm > .submit, .contact-form .contact-submit .btn-group-sm > .pushbutton-wide, #comments .comment-reply-link,
 #comments #cancel-comment-reply-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2364,46 +2378,51 @@ input[type="button"].btn-block {
   display: inline-flex;
   vertical-align: middle; }
   .btn-group > .btn, #commentform .btn-group > .submit, #comments .btn-group > .comment-reply-link,
-  #comments .btn-group > #cancel-comment-reply-link,
+  #comments .btn-group > #cancel-comment-reply-link, .contact-form .contact-submit .btn-group > .pushbutton-wide,
   .btn-group-vertical > .btn,
   #commentform .btn-group-vertical > .submit,
   #comments .btn-group-vertical > .comment-reply-link,
-  #comments .btn-group-vertical > #cancel-comment-reply-link {
+  #comments .btn-group-vertical > #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide {
     position: relative;
     flex: 0 1 auto; }
     .btn-group > .btn:hover, #commentform .btn-group > .submit:hover, #comments .btn-group > .comment-reply-link:hover,
-    #comments .btn-group > #cancel-comment-reply-link:hover,
+    #comments .btn-group > #cancel-comment-reply-link:hover, .contact-form .contact-submit .btn-group > .pushbutton-wide:hover,
     .btn-group-vertical > .btn:hover,
     #commentform .btn-group-vertical > .submit:hover,
     #comments .btn-group-vertical > .comment-reply-link:hover,
-    #comments .btn-group-vertical > #cancel-comment-reply-link:hover {
+    #comments .btn-group-vertical > #cancel-comment-reply-link:hover,
+    .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide:hover {
       z-index: 1; }
     .btn-group > .btn:focus, #commentform .btn-group > .submit:focus, #comments .btn-group > .comment-reply-link:focus,
-    #comments .btn-group > #cancel-comment-reply-link:focus, .btn-group > .btn:active, #commentform .btn-group > .submit:active, #comments .btn-group > .comment-reply-link:active,
-    #comments .btn-group > #cancel-comment-reply-link:active, .btn-group > .btn.active, #commentform .btn-group > .active.submit, #comments .btn-group > .active.comment-reply-link,
-    #comments .btn-group > .active#cancel-comment-reply-link,
+    #comments .btn-group > #cancel-comment-reply-link:focus, .contact-form .contact-submit .btn-group > .pushbutton-wide:focus, .btn-group > .btn:active, #commentform .btn-group > .submit:active, #comments .btn-group > .comment-reply-link:active,
+    #comments .btn-group > #cancel-comment-reply-link:active, .contact-form .contact-submit .btn-group > .pushbutton-wide:active, .btn-group > .btn.active, #commentform .btn-group > .active.submit, #comments .btn-group > .active.comment-reply-link,
+    #comments .btn-group > .active#cancel-comment-reply-link, .contact-form .contact-submit .btn-group > .active.pushbutton-wide,
     .btn-group-vertical > .btn:focus,
     #commentform .btn-group-vertical > .submit:focus,
     #comments .btn-group-vertical > .comment-reply-link:focus,
     #comments .btn-group-vertical > #cancel-comment-reply-link:focus,
+    .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide:focus,
     .btn-group-vertical > .btn:active,
     #commentform .btn-group-vertical > .submit:active,
     #comments .btn-group-vertical > .comment-reply-link:active,
     #comments .btn-group-vertical > #cancel-comment-reply-link:active,
+    .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide:active,
     .btn-group-vertical > .btn.active,
     #commentform .btn-group-vertical > .active.submit,
     #comments .btn-group-vertical > .active.comment-reply-link,
-    #comments .btn-group-vertical > .active#cancel-comment-reply-link {
+    #comments .btn-group-vertical > .active#cancel-comment-reply-link,
+    .contact-form .contact-submit .btn-group-vertical > .active.pushbutton-wide {
       z-index: 1; }
   .btn-group .btn + .btn, .btn-group #commentform .submit + .btn, #commentform .btn-group .submit + .btn, .btn-group #comments .comment-reply-link + .btn, #comments .btn-group .comment-reply-link + .btn,
   .btn-group #comments #cancel-comment-reply-link + .btn,
-  #comments .btn-group #cancel-comment-reply-link + .btn, .btn-group #commentform .btn + .submit, #commentform .btn-group .btn + .submit, .btn-group #commentform .submit + .submit, #commentform .btn-group .submit + .submit, .btn-group #comments #commentform .comment-reply-link + .submit, #commentform .btn-group #comments .comment-reply-link + .submit, #comments .btn-group #commentform .comment-reply-link + .submit, #commentform #comments .btn-group .comment-reply-link + .submit,
+  #comments .btn-group #cancel-comment-reply-link + .btn, .btn-group .contact-form .contact-submit .pushbutton-wide + .btn, .contact-form .contact-submit .btn-group .pushbutton-wide + .btn, .btn-group #commentform .btn + .submit, #commentform .btn-group .btn + .submit, .btn-group #commentform .submit + .submit, #commentform .btn-group .submit + .submit, .btn-group #comments #commentform .comment-reply-link + .submit, #commentform .btn-group #comments .comment-reply-link + .submit, #comments .btn-group #commentform .comment-reply-link + .submit, #commentform #comments .btn-group .comment-reply-link + .submit,
   .btn-group #comments #commentform #cancel-comment-reply-link + .submit,
   #commentform .btn-group #comments #cancel-comment-reply-link + .submit,
   #comments .btn-group #commentform #cancel-comment-reply-link + .submit,
-  #commentform #comments .btn-group #cancel-comment-reply-link + .submit, .btn-group #comments .btn + .comment-reply-link, #comments .btn-group .btn + .comment-reply-link, .btn-group #commentform #comments .submit + .comment-reply-link, #comments .btn-group #commentform .submit + .comment-reply-link, #commentform .btn-group #comments .submit + .comment-reply-link, #comments #commentform .btn-group .submit + .comment-reply-link, .btn-group #comments .comment-reply-link + .comment-reply-link, #comments .btn-group .comment-reply-link + .comment-reply-link,
+  #commentform #comments .btn-group #cancel-comment-reply-link + .submit, .btn-group .contact-form .contact-submit #commentform .pushbutton-wide + .submit, #commentform .btn-group .contact-form .contact-submit .pushbutton-wide + .submit, .contact-form .contact-submit .btn-group #commentform .pushbutton-wide + .submit, #commentform .contact-form .contact-submit .btn-group .pushbutton-wide + .submit, .btn-group #comments .btn + .comment-reply-link, #comments .btn-group .btn + .comment-reply-link, .btn-group #commentform #comments .submit + .comment-reply-link, #comments .btn-group #commentform .submit + .comment-reply-link, #commentform .btn-group #comments .submit + .comment-reply-link, #comments #commentform .btn-group .submit + .comment-reply-link, .btn-group #comments .comment-reply-link + .comment-reply-link, #comments .btn-group .comment-reply-link + .comment-reply-link,
   .btn-group #comments #cancel-comment-reply-link + .comment-reply-link,
-  #comments .btn-group #cancel-comment-reply-link + .comment-reply-link,
+  #comments .btn-group #cancel-comment-reply-link + .comment-reply-link, .btn-group .contact-form .contact-submit #comments .pushbutton-wide + .comment-reply-link, #comments .btn-group .contact-form .contact-submit .pushbutton-wide + .comment-reply-link, .contact-form .contact-submit .btn-group #comments .pushbutton-wide + .comment-reply-link, #comments .contact-form .contact-submit .btn-group .pushbutton-wide + .comment-reply-link,
   .btn-group #comments .btn + #cancel-comment-reply-link,
   #comments .btn-group .btn + #cancel-comment-reply-link,
   .btn-group #commentform #comments .submit + #cancel-comment-reply-link,
@@ -2414,6 +2433,14 @@ input[type="button"].btn-block {
   #comments .btn-group .comment-reply-link + #cancel-comment-reply-link,
   .btn-group #comments #cancel-comment-reply-link + #cancel-comment-reply-link,
   #comments .btn-group #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .btn-group .contact-form .contact-submit #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .btn-group .contact-form .contact-submit .pushbutton-wide + #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .contact-form .contact-submit .btn-group .pushbutton-wide + #cancel-comment-reply-link, .btn-group .contact-form .contact-submit .btn + .pushbutton-wide, .contact-form .contact-submit .btn-group .btn + .pushbutton-wide, .btn-group #commentform .contact-form .contact-submit .submit + .pushbutton-wide, .contact-form .contact-submit .btn-group #commentform .submit + .pushbutton-wide, #commentform .btn-group .contact-form .contact-submit .submit + .pushbutton-wide, .contact-form .contact-submit #commentform .btn-group .submit + .pushbutton-wide, .btn-group #comments .contact-form .contact-submit .comment-reply-link + .pushbutton-wide, .contact-form .contact-submit .btn-group #comments .comment-reply-link + .pushbutton-wide, #comments .btn-group .contact-form .contact-submit .comment-reply-link + .pushbutton-wide, .contact-form .contact-submit #comments .btn-group .comment-reply-link + .pushbutton-wide,
+  .btn-group #comments .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group #comments #cancel-comment-reply-link + .pushbutton-wide,
+  #comments .btn-group .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .btn-group #cancel-comment-reply-link + .pushbutton-wide, .btn-group .contact-form .contact-submit .pushbutton-wide + .pushbutton-wide, .contact-form .contact-submit .btn-group .pushbutton-wide + .pushbutton-wide,
   .btn-group .btn + .btn-group,
   .btn-group #commentform .submit + .btn-group,
   #commentform .btn-group .submit + .btn-group,
@@ -2421,6 +2448,8 @@ input[type="button"].btn-block {
   #comments .btn-group .comment-reply-link + .btn-group,
   .btn-group #comments #cancel-comment-reply-link + .btn-group,
   #comments .btn-group #cancel-comment-reply-link + .btn-group,
+  .btn-group .contact-form .contact-submit .pushbutton-wide + .btn-group,
+  .contact-form .contact-submit .btn-group .pushbutton-wide + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group #commentform .btn-group + .submit,
   #commentform .btn-group .btn-group + .submit,
@@ -2428,6 +2457,8 @@ input[type="button"].btn-block {
   #comments .btn-group .btn-group + .comment-reply-link,
   .btn-group #comments .btn-group + #cancel-comment-reply-link,
   #comments .btn-group .btn-group + #cancel-comment-reply-link,
+  .btn-group .contact-form .contact-submit .btn-group + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group .btn-group + .pushbutton-wide,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical #commentform .submit + .btn,
@@ -2436,6 +2467,8 @@ input[type="button"].btn-block {
   #comments .btn-group-vertical .comment-reply-link + .btn,
   .btn-group-vertical #comments #cancel-comment-reply-link + .btn,
   #comments .btn-group-vertical #cancel-comment-reply-link + .btn,
+  .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + .btn,
+  .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + .btn,
   .btn-group-vertical #commentform .btn + .submit,
   #commentform .btn-group-vertical .btn + .submit,
   .btn-group-vertical #commentform .submit + .submit,
@@ -2448,6 +2481,10 @@ input[type="button"].btn-block {
   #commentform .btn-group-vertical #comments #cancel-comment-reply-link + .submit,
   #comments .btn-group-vertical #commentform #cancel-comment-reply-link + .submit,
   #commentform #comments .btn-group-vertical #cancel-comment-reply-link + .submit,
+  .btn-group-vertical .contact-form .contact-submit #commentform .pushbutton-wide + .submit,
+  #commentform .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + .submit,
+  .contact-form .contact-submit .btn-group-vertical #commentform .pushbutton-wide + .submit,
+  #commentform .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + .submit,
   .btn-group-vertical #comments .btn + .comment-reply-link,
   #comments .btn-group-vertical .btn + .comment-reply-link,
   .btn-group-vertical #commentform #comments .submit + .comment-reply-link,
@@ -2458,6 +2495,10 @@ input[type="button"].btn-block {
   #comments .btn-group-vertical .comment-reply-link + .comment-reply-link,
   .btn-group-vertical #comments #cancel-comment-reply-link + .comment-reply-link,
   #comments .btn-group-vertical #cancel-comment-reply-link + .comment-reply-link,
+  .btn-group-vertical .contact-form .contact-submit #comments .pushbutton-wide + .comment-reply-link,
+  #comments .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + .comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical #comments .pushbutton-wide + .comment-reply-link,
+  #comments .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + .comment-reply-link,
   .btn-group-vertical #comments .btn + #cancel-comment-reply-link,
   #comments .btn-group-vertical .btn + #cancel-comment-reply-link,
   .btn-group-vertical #commentform #comments .submit + #cancel-comment-reply-link,
@@ -2468,6 +2509,26 @@ input[type="button"].btn-block {
   #comments .btn-group-vertical .comment-reply-link + #cancel-comment-reply-link,
   .btn-group-vertical #comments #cancel-comment-reply-link + #cancel-comment-reply-link,
   #comments .btn-group-vertical #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .btn-group-vertical .contact-form .contact-submit #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + #cancel-comment-reply-link,
+  .btn-group-vertical .contact-form .contact-submit .btn + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical .btn + .pushbutton-wide,
+  .btn-group-vertical #commentform .contact-form .contact-submit .submit + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical #commentform .submit + .pushbutton-wide,
+  #commentform .btn-group-vertical .contact-form .contact-submit .submit + .pushbutton-wide,
+  .contact-form .contact-submit #commentform .btn-group-vertical .submit + .pushbutton-wide,
+  .btn-group-vertical #comments .contact-form .contact-submit .comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical #comments .comment-reply-link + .pushbutton-wide,
+  #comments .btn-group-vertical .contact-form .contact-submit .comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .btn-group-vertical .comment-reply-link + .pushbutton-wide,
+  .btn-group-vertical #comments .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical #comments #cancel-comment-reply-link + .pushbutton-wide,
+  #comments .btn-group-vertical .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .btn-group-vertical #cancel-comment-reply-link + .pushbutton-wide,
+  .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + .pushbutton-wide,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical #commentform .submit + .btn-group,
   #commentform .btn-group-vertical .submit + .btn-group,
@@ -2475,6 +2536,8 @@ input[type="button"].btn-block {
   #comments .btn-group-vertical .comment-reply-link + .btn-group,
   .btn-group-vertical #comments #cancel-comment-reply-link + .btn-group,
   #comments .btn-group-vertical #cancel-comment-reply-link + .btn-group,
+  .btn-group-vertical .contact-form .contact-submit .pushbutton-wide + .btn-group,
+  .contact-form .contact-submit .btn-group-vertical .pushbutton-wide + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical #commentform .btn-group + .submit,
   #commentform .btn-group-vertical .btn-group + .submit,
@@ -2482,6 +2545,8 @@ input[type="button"].btn-block {
   #comments .btn-group-vertical .btn-group + .comment-reply-link,
   .btn-group-vertical #comments .btn-group + #cancel-comment-reply-link,
   #comments .btn-group-vertical .btn-group + #cancel-comment-reply-link,
+  .btn-group-vertical .contact-form .contact-submit .btn-group + .pushbutton-wide,
+  .contact-form .contact-submit .btn-group-vertical .btn-group + .pushbutton-wide,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2493,22 +2558,24 @@ input[type="button"].btn-block {
     width: auto; }
 
 .btn-group > .btn:first-child, #commentform .btn-group > .submit:first-child, #comments .btn-group > .comment-reply-link:first-child,
-#comments .btn-group > #cancel-comment-reply-link:first-child {
+#comments .btn-group > #cancel-comment-reply-link:first-child, .contact-form .contact-submit .btn-group > .pushbutton-wide:first-child {
   margin-left: 0; }
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle), #commentform .btn-group > .submit:not(:last-child):not(.dropdown-toggle), #comments .btn-group > .comment-reply-link:not(:last-child):not(.dropdown-toggle),
-#comments .btn-group > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+#comments .btn-group > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle), .contact-form .contact-submit .btn-group > .pushbutton-wide:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 #commentform .btn-group > .btn-group:not(:last-child) > .submit,
 #comments .btn-group > .btn-group:not(:last-child) > .comment-reply-link,
-#comments .btn-group > .btn-group:not(:last-child) > #cancel-comment-reply-link {
+#comments .btn-group > .btn-group:not(:last-child) > #cancel-comment-reply-link,
+.contact-form .contact-submit .btn-group > .btn-group:not(:last-child) > .pushbutton-wide {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 .btn-group > .btn:not(:first-child), #commentform .btn-group > .submit:not(:first-child), #comments .btn-group > .comment-reply-link:not(:first-child),
-#comments .btn-group > #cancel-comment-reply-link:not(:first-child),
+#comments .btn-group > #cancel-comment-reply-link:not(:first-child), .contact-form .contact-submit .btn-group > .pushbutton-wide:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 #commentform .btn-group > .btn-group:not(:first-child) > .submit,
 #comments .btn-group > .btn-group:not(:first-child) > .comment-reply-link,
-#comments .btn-group > .btn-group:not(:first-child) > #cancel-comment-reply-link {
+#comments .btn-group > .btn-group:not(:first-child) > #cancel-comment-reply-link,
+.contact-form .contact-submit .btn-group > .btn-group:not(:first-child) > .pushbutton-wide {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2521,13 +2588,13 @@ input[type="button"].btn-block {
     margin-right: 0; }
 
 .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #commentform .btn-group-sm > .submit + .dropdown-toggle-split, #comments .btn-group-sm > .comment-reply-link + .dropdown-toggle-split,
-#comments .btn-group-sm > #cancel-comment-reply-link + .dropdown-toggle-split, #comments .comment-reply-link + .dropdown-toggle-split,
+#comments .btn-group-sm > #cancel-comment-reply-link + .dropdown-toggle-split, .contact-form .contact-submit .btn-group-sm > .pushbutton-wide + .dropdown-toggle-split, #comments .comment-reply-link + .dropdown-toggle-split,
 #comments #cancel-comment-reply-link + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #commentform .btn-group-lg > .submit + .dropdown-toggle-split, #comments .btn-group-lg > .comment-reply-link + .dropdown-toggle-split,
-#comments .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split {
+#comments .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split, .contact-form .contact-submit .btn-group-lg > .pushbutton-wide + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2537,68 +2604,80 @@ input[type="button"].btn-block {
   justify-content: center; }
   .btn-group-vertical .btn, .btn-group-vertical #commentform .submit, #commentform .btn-group-vertical .submit, .btn-group-vertical #comments .comment-reply-link, #comments .btn-group-vertical .comment-reply-link,
   .btn-group-vertical #comments #cancel-comment-reply-link,
-  #comments .btn-group-vertical #cancel-comment-reply-link,
+  #comments .btn-group-vertical #cancel-comment-reply-link, .btn-group-vertical .contact-form .contact-submit .pushbutton-wide, .contact-form .contact-submit .btn-group-vertical .pushbutton-wide,
   .btn-group-vertical .btn-group {
     width: 100%; }
   .btn-group-vertical > .btn + .btn, #commentform .btn-group-vertical > .submit + .btn, #comments .btn-group-vertical > .comment-reply-link + .btn,
-  #comments .btn-group-vertical > #cancel-comment-reply-link + .btn, #commentform .btn-group-vertical > .btn + .submit, #commentform .btn-group-vertical > .submit + .submit, #comments #commentform .btn-group-vertical > .comment-reply-link + .submit, #commentform #comments .btn-group-vertical > .comment-reply-link + .submit,
+  #comments .btn-group-vertical > #cancel-comment-reply-link + .btn, .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + .btn, #commentform .btn-group-vertical > .btn + .submit, #commentform .btn-group-vertical > .submit + .submit, #comments #commentform .btn-group-vertical > .comment-reply-link + .submit, #commentform #comments .btn-group-vertical > .comment-reply-link + .submit,
   #comments #commentform .btn-group-vertical > #cancel-comment-reply-link + .submit,
-  #commentform #comments .btn-group-vertical > #cancel-comment-reply-link + .submit, #comments .btn-group-vertical > .btn + .comment-reply-link, #commentform #comments .btn-group-vertical > .submit + .comment-reply-link, #comments #commentform .btn-group-vertical > .submit + .comment-reply-link, #comments .btn-group-vertical > .comment-reply-link + .comment-reply-link,
-  #comments .btn-group-vertical > #cancel-comment-reply-link + .comment-reply-link,
+  #commentform #comments .btn-group-vertical > #cancel-comment-reply-link + .submit, .contact-form .contact-submit #commentform .btn-group-vertical > .pushbutton-wide + .submit, #commentform .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + .submit, #comments .btn-group-vertical > .btn + .comment-reply-link, #commentform #comments .btn-group-vertical > .submit + .comment-reply-link, #comments #commentform .btn-group-vertical > .submit + .comment-reply-link, #comments .btn-group-vertical > .comment-reply-link + .comment-reply-link,
+  #comments .btn-group-vertical > #cancel-comment-reply-link + .comment-reply-link, .contact-form .contact-submit #comments .btn-group-vertical > .pushbutton-wide + .comment-reply-link, #comments .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + .comment-reply-link,
   #comments .btn-group-vertical > .btn + #cancel-comment-reply-link,
   #commentform #comments .btn-group-vertical > .submit + #cancel-comment-reply-link,
   #comments #commentform .btn-group-vertical > .submit + #cancel-comment-reply-link,
   #comments .btn-group-vertical > .comment-reply-link + #cancel-comment-reply-link,
   #comments .btn-group-vertical > #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .contact-form .contact-submit #comments .btn-group-vertical > .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + #cancel-comment-reply-link, .contact-form .contact-submit .btn-group-vertical > .btn + .pushbutton-wide, #commentform .contact-form .contact-submit .btn-group-vertical > .submit + .pushbutton-wide, .contact-form .contact-submit #commentform .btn-group-vertical > .submit + .pushbutton-wide, #comments .contact-form .contact-submit .btn-group-vertical > .comment-reply-link + .pushbutton-wide, .contact-form .contact-submit #comments .btn-group-vertical > .comment-reply-link + .pushbutton-wide,
+  #comments .contact-form .contact-submit .btn-group-vertical > #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .btn-group-vertical > #cancel-comment-reply-link + .pushbutton-wide, .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + .pushbutton-wide,
   .btn-group-vertical > .btn + .btn-group,
   #commentform .btn-group-vertical > .submit + .btn-group,
   #comments .btn-group-vertical > .comment-reply-link + .btn-group,
   #comments .btn-group-vertical > #cancel-comment-reply-link + .btn-group,
+  .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
   #commentform .btn-group-vertical > .btn-group + .submit,
   #comments .btn-group-vertical > .btn-group + .comment-reply-link,
   #comments .btn-group-vertical > .btn-group + #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical > .btn-group + .pushbutton-wide,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
   .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #commentform .btn-group-vertical > .submit:not(:last-child):not(.dropdown-toggle), #comments .btn-group-vertical > .comment-reply-link:not(:last-child):not(.dropdown-toggle),
-  #comments .btn-group-vertical > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+  #comments .btn-group-vertical > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle), .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   #commentform .btn-group-vertical > .btn-group:not(:last-child) > .submit,
   #comments .btn-group-vertical > .btn-group:not(:last-child) > .comment-reply-link,
-  #comments .btn-group-vertical > .btn-group:not(:last-child) > #cancel-comment-reply-link {
+  #comments .btn-group-vertical > .btn-group:not(:last-child) > #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical > .btn-group:not(:last-child) > .pushbutton-wide {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .btn-group-vertical > .btn:not(:first-child), #commentform .btn-group-vertical > .submit:not(:first-child), #comments .btn-group-vertical > .comment-reply-link:not(:first-child),
-  #comments .btn-group-vertical > #cancel-comment-reply-link:not(:first-child),
+  #comments .btn-group-vertical > #cancel-comment-reply-link:not(:first-child), .contact-form .contact-submit .btn-group-vertical > .pushbutton-wide:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   #commentform .btn-group-vertical > .btn-group:not(:first-child) > .submit,
   #comments .btn-group-vertical > .btn-group:not(:first-child) > .comment-reply-link,
-  #comments .btn-group-vertical > .btn-group:not(:first-child) > #cancel-comment-reply-link {
+  #comments .btn-group-vertical > .btn-group:not(:first-child) > #cancel-comment-reply-link,
+  .contact-form .contact-submit .btn-group-vertical > .btn-group:not(:first-child) > .pushbutton-wide {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group-toggle > .btn, #commentform .btn-group-toggle > .submit, #comments .btn-group-toggle > .comment-reply-link,
-#comments .btn-group-toggle > #cancel-comment-reply-link,
+#comments .btn-group-toggle > #cancel-comment-reply-link, .contact-form .contact-submit .btn-group-toggle > .pushbutton-wide,
 .btn-group-toggle > .btn-group > .btn,
 #commentform .btn-group-toggle > .btn-group > .submit,
 #comments .btn-group-toggle > .btn-group > .comment-reply-link,
-#comments .btn-group-toggle > .btn-group > #cancel-comment-reply-link {
+#comments .btn-group-toggle > .btn-group > #cancel-comment-reply-link,
+.contact-form .contact-submit .btn-group-toggle > .btn-group > .pushbutton-wide {
   margin-bottom: 0; }
   .btn-group-toggle > .btn input[type="radio"], #commentform .btn-group-toggle > .submit input[type="radio"], #comments .btn-group-toggle > .comment-reply-link input[type="radio"],
-  #comments .btn-group-toggle > #cancel-comment-reply-link input[type="radio"],
+  #comments .btn-group-toggle > #cancel-comment-reply-link input[type="radio"], .contact-form .contact-submit .btn-group-toggle > .pushbutton-wide input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   #commentform .btn-group-toggle > .submit input[type="checkbox"],
   #comments .btn-group-toggle > .comment-reply-link input[type="checkbox"],
   #comments .btn-group-toggle > #cancel-comment-reply-link input[type="checkbox"],
+  .contact-form .contact-submit .btn-group-toggle > .pushbutton-wide input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   #commentform .btn-group-toggle > .btn-group > .submit input[type="radio"],
   #comments .btn-group-toggle > .btn-group > .comment-reply-link input[type="radio"],
   #comments .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="radio"],
+  .contact-form .contact-submit .btn-group-toggle > .btn-group > .pushbutton-wide input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   #commentform .btn-group-toggle > .btn-group > .submit input[type="checkbox"],
   #comments .btn-group-toggle > .btn-group > .comment-reply-link input[type="checkbox"],
-  #comments .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="checkbox"] {
+  #comments .btn-group-toggle > .btn-group > #cancel-comment-reply-link input[type="checkbox"],
+  .contact-form .contact-submit .btn-group-toggle > .btn-group > .pushbutton-wide input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2609,34 +2688,42 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control,
+  .input-group > .form-control, .contact-form > div .input-group > input, .contact-form > div .input-group > textarea,
   .input-group > .custom-select,
   .input-group > .custom-file {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control,
+    .input-group > .form-control + .form-control, .contact-form > div .input-group > input + .form-control, .contact-form > div .input-group > textarea + .form-control, .contact-form > div .input-group > .form-control + input, .contact-form > div .input-group > input + input, .contact-form > div .input-group > textarea + input, .contact-form > div .input-group > .form-control + textarea, .contact-form > div .input-group > input + textarea, .contact-form > div .input-group > textarea + textarea,
     .input-group > .form-control + .custom-select,
+    .contact-form > div .input-group > input + .custom-select,
+    .contact-form > div .input-group > textarea + .custom-select,
     .input-group > .form-control + .custom-file,
+    .contact-form > div .input-group > input + .custom-file,
+    .contact-form > div .input-group > textarea + .custom-file,
     .input-group > .custom-select + .form-control,
+    .contact-form > div .input-group > .custom-select + input,
+    .contact-form > div .input-group > .custom-select + textarea,
     .input-group > .custom-select + .custom-select,
     .input-group > .custom-select + .custom-file,
     .input-group > .custom-file + .form-control,
+    .contact-form > div .input-group > .custom-file + input,
+    .contact-form > div .input-group > .custom-file + textarea,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:focus,
+  .input-group > .form-control:focus, .contact-form > div .input-group > input:focus, .contact-form > div .input-group > textarea:focus,
   .input-group > .custom-select:focus,
   .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
     z-index: 3; }
   .input-group > .custom-file .custom-file-input:focus {
     z-index: 4; }
-  .input-group > .form-control:not(:last-child),
+  .input-group > .form-control:not(:last-child), .contact-form > div .input-group > input:not(:last-child), .contact-form > div .input-group > textarea:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child),
+  .input-group > .form-control:not(:first-child), .contact-form > div .input-group > input:not(:first-child), .contact-form > div .input-group > textarea:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -2655,25 +2742,27 @@ input[type="button"].btn-block {
   display: flex; }
   .input-group-prepend .btn, .input-group-prepend #commentform .submit, #commentform .input-group-prepend .submit, .input-group-prepend #comments .comment-reply-link, #comments .input-group-prepend .comment-reply-link,
   .input-group-prepend #comments #cancel-comment-reply-link,
-  #comments .input-group-prepend #cancel-comment-reply-link,
+  #comments .input-group-prepend #cancel-comment-reply-link, .input-group-prepend .contact-form .contact-submit .pushbutton-wide, .contact-form .contact-submit .input-group-prepend .pushbutton-wide,
   .input-group-append .btn,
   .input-group-append #commentform .submit,
   #commentform .input-group-append .submit,
   .input-group-append #comments .comment-reply-link,
   #comments .input-group-append .comment-reply-link,
   .input-group-append #comments #cancel-comment-reply-link,
-  #comments .input-group-append #cancel-comment-reply-link {
+  #comments .input-group-append #cancel-comment-reply-link,
+  .input-group-append .contact-form .contact-submit .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append .pushbutton-wide {
     position: relative;
     z-index: 2; }
   .input-group-prepend .btn + .btn, .input-group-prepend #commentform .submit + .btn, #commentform .input-group-prepend .submit + .btn, .input-group-prepend #comments .comment-reply-link + .btn, #comments .input-group-prepend .comment-reply-link + .btn,
   .input-group-prepend #comments #cancel-comment-reply-link + .btn,
-  #comments .input-group-prepend #cancel-comment-reply-link + .btn, .input-group-prepend #commentform .btn + .submit, #commentform .input-group-prepend .btn + .submit, .input-group-prepend #commentform .submit + .submit, #commentform .input-group-prepend .submit + .submit, .input-group-prepend #comments #commentform .comment-reply-link + .submit, #commentform .input-group-prepend #comments .comment-reply-link + .submit, #comments .input-group-prepend #commentform .comment-reply-link + .submit, #commentform #comments .input-group-prepend .comment-reply-link + .submit,
+  #comments .input-group-prepend #cancel-comment-reply-link + .btn, .input-group-prepend .contact-form .contact-submit .pushbutton-wide + .btn, .contact-form .contact-submit .input-group-prepend .pushbutton-wide + .btn, .input-group-prepend #commentform .btn + .submit, #commentform .input-group-prepend .btn + .submit, .input-group-prepend #commentform .submit + .submit, #commentform .input-group-prepend .submit + .submit, .input-group-prepend #comments #commentform .comment-reply-link + .submit, #commentform .input-group-prepend #comments .comment-reply-link + .submit, #comments .input-group-prepend #commentform .comment-reply-link + .submit, #commentform #comments .input-group-prepend .comment-reply-link + .submit,
   .input-group-prepend #comments #commentform #cancel-comment-reply-link + .submit,
   #commentform .input-group-prepend #comments #cancel-comment-reply-link + .submit,
   #comments .input-group-prepend #commentform #cancel-comment-reply-link + .submit,
-  #commentform #comments .input-group-prepend #cancel-comment-reply-link + .submit, .input-group-prepend #comments .btn + .comment-reply-link, #comments .input-group-prepend .btn + .comment-reply-link, .input-group-prepend #commentform #comments .submit + .comment-reply-link, #comments .input-group-prepend #commentform .submit + .comment-reply-link, #commentform .input-group-prepend #comments .submit + .comment-reply-link, #comments #commentform .input-group-prepend .submit + .comment-reply-link, .input-group-prepend #comments .comment-reply-link + .comment-reply-link, #comments .input-group-prepend .comment-reply-link + .comment-reply-link,
+  #commentform #comments .input-group-prepend #cancel-comment-reply-link + .submit, .input-group-prepend .contact-form .contact-submit #commentform .pushbutton-wide + .submit, #commentform .input-group-prepend .contact-form .contact-submit .pushbutton-wide + .submit, .contact-form .contact-submit .input-group-prepend #commentform .pushbutton-wide + .submit, #commentform .contact-form .contact-submit .input-group-prepend .pushbutton-wide + .submit, .input-group-prepend #comments .btn + .comment-reply-link, #comments .input-group-prepend .btn + .comment-reply-link, .input-group-prepend #commentform #comments .submit + .comment-reply-link, #comments .input-group-prepend #commentform .submit + .comment-reply-link, #commentform .input-group-prepend #comments .submit + .comment-reply-link, #comments #commentform .input-group-prepend .submit + .comment-reply-link, .input-group-prepend #comments .comment-reply-link + .comment-reply-link, #comments .input-group-prepend .comment-reply-link + .comment-reply-link,
   .input-group-prepend #comments #cancel-comment-reply-link + .comment-reply-link,
-  #comments .input-group-prepend #cancel-comment-reply-link + .comment-reply-link,
+  #comments .input-group-prepend #cancel-comment-reply-link + .comment-reply-link, .input-group-prepend .contact-form .contact-submit #comments .pushbutton-wide + .comment-reply-link, #comments .input-group-prepend .contact-form .contact-submit .pushbutton-wide + .comment-reply-link, .contact-form .contact-submit .input-group-prepend #comments .pushbutton-wide + .comment-reply-link, #comments .contact-form .contact-submit .input-group-prepend .pushbutton-wide + .comment-reply-link,
   .input-group-prepend #comments .btn + #cancel-comment-reply-link,
   #comments .input-group-prepend .btn + #cancel-comment-reply-link,
   .input-group-prepend #commentform #comments .submit + #cancel-comment-reply-link,
@@ -2684,6 +2773,14 @@ input[type="button"].btn-block {
   #comments .input-group-prepend .comment-reply-link + #cancel-comment-reply-link,
   .input-group-prepend #comments #cancel-comment-reply-link + #cancel-comment-reply-link,
   #comments .input-group-prepend #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .input-group-prepend .contact-form .contact-submit #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .input-group-prepend .contact-form .contact-submit .pushbutton-wide + #cancel-comment-reply-link,
+  .contact-form .contact-submit .input-group-prepend #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .contact-form .contact-submit .input-group-prepend .pushbutton-wide + #cancel-comment-reply-link, .input-group-prepend .contact-form .contact-submit .btn + .pushbutton-wide, .contact-form .contact-submit .input-group-prepend .btn + .pushbutton-wide, .input-group-prepend #commentform .contact-form .contact-submit .submit + .pushbutton-wide, .contact-form .contact-submit .input-group-prepend #commentform .submit + .pushbutton-wide, #commentform .input-group-prepend .contact-form .contact-submit .submit + .pushbutton-wide, .contact-form .contact-submit #commentform .input-group-prepend .submit + .pushbutton-wide, .input-group-prepend #comments .contact-form .contact-submit .comment-reply-link + .pushbutton-wide, .contact-form .contact-submit .input-group-prepend #comments .comment-reply-link + .pushbutton-wide, #comments .input-group-prepend .contact-form .contact-submit .comment-reply-link + .pushbutton-wide, .contact-form .contact-submit #comments .input-group-prepend .comment-reply-link + .pushbutton-wide,
+  .input-group-prepend #comments .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-prepend #comments #cancel-comment-reply-link + .pushbutton-wide,
+  #comments .input-group-prepend .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .input-group-prepend #cancel-comment-reply-link + .pushbutton-wide, .input-group-prepend .contact-form .contact-submit .pushbutton-wide + .pushbutton-wide, .contact-form .contact-submit .input-group-prepend .pushbutton-wide + .pushbutton-wide,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend #commentform .submit + .input-group-text,
   #commentform .input-group-prepend .submit + .input-group-text,
@@ -2691,6 +2788,8 @@ input[type="button"].btn-block {
   #comments .input-group-prepend .comment-reply-link + .input-group-text,
   .input-group-prepend #comments #cancel-comment-reply-link + .input-group-text,
   #comments .input-group-prepend #cancel-comment-reply-link + .input-group-text,
+  .input-group-prepend .contact-form .contact-submit .pushbutton-wide + .input-group-text,
+  .contact-form .contact-submit .input-group-prepend .pushbutton-wide + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend #commentform .input-group-text + .submit,
@@ -2699,6 +2798,8 @@ input[type="button"].btn-block {
   #comments .input-group-prepend .input-group-text + .comment-reply-link,
   .input-group-prepend #comments .input-group-text + #cancel-comment-reply-link,
   #comments .input-group-prepend .input-group-text + #cancel-comment-reply-link,
+  .input-group-prepend .contact-form .contact-submit .input-group-text + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-prepend .input-group-text + .pushbutton-wide,
   .input-group-append .btn + .btn,
   .input-group-append #commentform .submit + .btn,
   #commentform .input-group-append .submit + .btn,
@@ -2706,6 +2807,8 @@ input[type="button"].btn-block {
   #comments .input-group-append .comment-reply-link + .btn,
   .input-group-append #comments #cancel-comment-reply-link + .btn,
   #comments .input-group-append #cancel-comment-reply-link + .btn,
+  .input-group-append .contact-form .contact-submit .pushbutton-wide + .btn,
+  .contact-form .contact-submit .input-group-append .pushbutton-wide + .btn,
   .input-group-append #commentform .btn + .submit,
   #commentform .input-group-append .btn + .submit,
   .input-group-append #commentform .submit + .submit,
@@ -2718,6 +2821,10 @@ input[type="button"].btn-block {
   #commentform .input-group-append #comments #cancel-comment-reply-link + .submit,
   #comments .input-group-append #commentform #cancel-comment-reply-link + .submit,
   #commentform #comments .input-group-append #cancel-comment-reply-link + .submit,
+  .input-group-append .contact-form .contact-submit #commentform .pushbutton-wide + .submit,
+  #commentform .input-group-append .contact-form .contact-submit .pushbutton-wide + .submit,
+  .contact-form .contact-submit .input-group-append #commentform .pushbutton-wide + .submit,
+  #commentform .contact-form .contact-submit .input-group-append .pushbutton-wide + .submit,
   .input-group-append #comments .btn + .comment-reply-link,
   #comments .input-group-append .btn + .comment-reply-link,
   .input-group-append #commentform #comments .submit + .comment-reply-link,
@@ -2728,6 +2835,10 @@ input[type="button"].btn-block {
   #comments .input-group-append .comment-reply-link + .comment-reply-link,
   .input-group-append #comments #cancel-comment-reply-link + .comment-reply-link,
   #comments .input-group-append #cancel-comment-reply-link + .comment-reply-link,
+  .input-group-append .contact-form .contact-submit #comments .pushbutton-wide + .comment-reply-link,
+  #comments .input-group-append .contact-form .contact-submit .pushbutton-wide + .comment-reply-link,
+  .contact-form .contact-submit .input-group-append #comments .pushbutton-wide + .comment-reply-link,
+  #comments .contact-form .contact-submit .input-group-append .pushbutton-wide + .comment-reply-link,
   .input-group-append #comments .btn + #cancel-comment-reply-link,
   #comments .input-group-append .btn + #cancel-comment-reply-link,
   .input-group-append #commentform #comments .submit + #cancel-comment-reply-link,
@@ -2738,6 +2849,26 @@ input[type="button"].btn-block {
   #comments .input-group-append .comment-reply-link + #cancel-comment-reply-link,
   .input-group-append #comments #cancel-comment-reply-link + #cancel-comment-reply-link,
   #comments .input-group-append #cancel-comment-reply-link + #cancel-comment-reply-link,
+  .input-group-append .contact-form .contact-submit #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .input-group-append .contact-form .contact-submit .pushbutton-wide + #cancel-comment-reply-link,
+  .contact-form .contact-submit .input-group-append #comments .pushbutton-wide + #cancel-comment-reply-link,
+  #comments .contact-form .contact-submit .input-group-append .pushbutton-wide + #cancel-comment-reply-link,
+  .input-group-append .contact-form .contact-submit .btn + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append .btn + .pushbutton-wide,
+  .input-group-append #commentform .contact-form .contact-submit .submit + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append #commentform .submit + .pushbutton-wide,
+  #commentform .input-group-append .contact-form .contact-submit .submit + .pushbutton-wide,
+  .contact-form .contact-submit #commentform .input-group-append .submit + .pushbutton-wide,
+  .input-group-append #comments .contact-form .contact-submit .comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append #comments .comment-reply-link + .pushbutton-wide,
+  #comments .input-group-append .contact-form .contact-submit .comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .input-group-append .comment-reply-link + .pushbutton-wide,
+  .input-group-append #comments .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append #comments #cancel-comment-reply-link + .pushbutton-wide,
+  #comments .input-group-append .contact-form .contact-submit #cancel-comment-reply-link + .pushbutton-wide,
+  .contact-form .contact-submit #comments .input-group-append #cancel-comment-reply-link + .pushbutton-wide,
+  .input-group-append .contact-form .contact-submit .pushbutton-wide + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append .pushbutton-wide + .pushbutton-wide,
   .input-group-append .btn + .input-group-text,
   .input-group-append #commentform .submit + .input-group-text,
   #commentform .input-group-append .submit + .input-group-text,
@@ -2745,6 +2876,8 @@ input[type="button"].btn-block {
   #comments .input-group-append .comment-reply-link + .input-group-text,
   .input-group-append #comments #cancel-comment-reply-link + .input-group-text,
   #comments .input-group-append #cancel-comment-reply-link + .input-group-text,
+  .input-group-append .contact-form .contact-submit .pushbutton-wide + .input-group-text,
+  .contact-form .contact-submit .input-group-append .pushbutton-wide + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append #commentform .input-group-text + .submit,
@@ -2752,7 +2885,9 @@ input[type="button"].btn-block {
   .input-group-append #comments .input-group-text + .comment-reply-link,
   #comments .input-group-append .input-group-text + .comment-reply-link,
   .input-group-append #comments .input-group-text + #cancel-comment-reply-link,
-  #comments .input-group-append .input-group-text + #cancel-comment-reply-link {
+  #comments .input-group-append .input-group-text + #cancel-comment-reply-link,
+  .input-group-append .contact-form .contact-submit .input-group-text + .pushbutton-wide,
+  .contact-form .contact-submit .input-group-append .input-group-text + .pushbutton-wide {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2779,34 +2914,38 @@ input[type="button"].btn-block {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, .contact-form > div .input-group-lg > input, .contact-form > div .input-group-lg > textarea,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 #commentform .input-group-lg > .input-group-prepend > .submit,
 #comments .input-group-lg > .input-group-prepend > .comment-reply-link,
 #comments .input-group-lg > .input-group-prepend > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group-lg > .input-group-prepend > .pushbutton-wide,
 .input-group-lg > .input-group-append > .btn,
 #commentform .input-group-lg > .input-group-append > .submit,
 #comments .input-group-lg > .input-group-append > .comment-reply-link,
-#comments .input-group-lg > .input-group-append > #cancel-comment-reply-link {
+#comments .input-group-lg > .input-group-append > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group-lg > .input-group-append > .pushbutton-wide {
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, .contact-form > div .input-group-sm > input, .contact-form > div .input-group-sm > textarea,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 #commentform .input-group-sm > .input-group-prepend > .submit,
 #comments .input-group-sm > .input-group-prepend > .comment-reply-link,
 #comments .input-group-sm > .input-group-prepend > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group-sm > .input-group-prepend > .pushbutton-wide,
 .input-group-sm > .input-group-append > .btn,
 #commentform .input-group-sm > .input-group-append > .submit,
 #comments .input-group-sm > .input-group-append > .comment-reply-link,
-#comments .input-group-sm > .input-group-append > #cancel-comment-reply-link {
+#comments .input-group-sm > .input-group-append > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group-sm > .input-group-append > .pushbutton-wide {
   height: calc(1.8125rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2814,33 +2953,37 @@ input[type="button"].btn-block {
   border-radius: 0.2rem; }
 
 .input-group > .input-group-prepend > .btn, #commentform .input-group > .input-group-prepend > .submit, #comments .input-group > .input-group-prepend > .comment-reply-link,
-#comments .input-group > .input-group-prepend > #cancel-comment-reply-link,
+#comments .input-group > .input-group-prepend > #cancel-comment-reply-link, .contact-form .contact-submit .input-group > .input-group-prepend > .pushbutton-wide,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 #commentform .input-group > .input-group-append:not(:last-child) > .submit,
 #comments .input-group > .input-group-append:not(:last-child) > .comment-reply-link,
 #comments .input-group > .input-group-append:not(:last-child) > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group > .input-group-append:not(:last-child) > .pushbutton-wide,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 #commentform .input-group > .input-group-append:last-child > .submit:not(:last-child):not(.dropdown-toggle),
 #comments .input-group > .input-group-append:last-child > .comment-reply-link:not(:last-child):not(.dropdown-toggle),
 #comments .input-group > .input-group-append:last-child > #cancel-comment-reply-link:not(:last-child):not(.dropdown-toggle),
+.contact-form .contact-submit .input-group > .input-group-append:last-child > .pushbutton-wide:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .input-group > .input-group-append > .btn, #commentform .input-group > .input-group-append > .submit, #comments .input-group > .input-group-append > .comment-reply-link,
-#comments .input-group > .input-group-append > #cancel-comment-reply-link,
+#comments .input-group > .input-group-append > #cancel-comment-reply-link, .contact-form .contact-submit .input-group > .input-group-append > .pushbutton-wide,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 #commentform .input-group > .input-group-prepend:not(:first-child) > .submit,
 #comments .input-group > .input-group-prepend:not(:first-child) > .comment-reply-link,
 #comments .input-group > .input-group-prepend:not(:first-child) > #cancel-comment-reply-link,
+.contact-form .contact-submit .input-group > .input-group-prepend:not(:first-child) > .pushbutton-wide,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 #commentform .input-group > .input-group-prepend:first-child > .submit:not(:first-child),
 #comments .input-group > .input-group-prepend:first-child > .comment-reply-link:not(:first-child),
 #comments .input-group > .input-group-prepend:first-child > #cancel-comment-reply-link:not(:first-child),
+.contact-form .contact-submit .input-group > .input-group-prepend:first-child > .pushbutton-wide:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3853,7 +3996,7 @@ input[type="button"].btn-block {
     display: none; }
 
 .btn .badge, #commentform .submit .badge, #comments .comment-reply-link .badge,
-#comments #cancel-comment-reply-link .badge {
+#comments #cancel-comment-reply-link .badge, .contact-form .contact-submit .pushbutton-wide .badge {
   position: relative;
   top: -1px; }
 
@@ -4841,13 +4984,13 @@ button#maintenance-mode-alert:focus {
 .border-right {
   border-right: 1px solid #dee2e6 !important; }
 
-.border-bottom, #featured-widget-area .card {
+.border-bottom, #featured-widget-area .card, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5 {
   border-bottom: 1px solid #dee2e6 !important; }
 
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
 
-.border-0 {
+.border-0, .page article header h1, .single article header h1 {
   border: 0 !important; }
 
 .border-top-0, #featured-widget-area .card {
@@ -5745,11 +5888,11 @@ button#maintenance-mode-alert:focus {
 #comments-navigation.nav .comments-next, #call_action_one .call-action-wrapper {
   width: 50% !important; }
 
-.w-75 {
+.w-75, .contact-form {
   width: 75% !important; }
 
 .w-100, #site-pagination.prev-next a, #posts-navigation.nav a,
-#comments-navigation.nav a {
+#comments-navigation.nav a, .contact-form > div input, .contact-form > div textarea {
   width: 100% !important; }
 
 .w-auto {
@@ -5770,7 +5913,7 @@ button#maintenance-mode-alert:focus {
 .h-auto {
   height: auto !important; }
 
-.mw-100 {
+.mw-100, .contact-form > div input, .contact-form > div textarea {
   max-width: 100% !important; }
 
 .mh-100 {
@@ -5814,7 +5957,7 @@ button#maintenance-mode-alert:focus {
 
 .ml-1, #maintenance-mode #countdowntimer .periodDisplay, #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
 #top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
-#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link,
+#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link, #top-menu .navbar-collapse #language .contact-form .contact-submit .pushbutton-wide, .contact-form .contact-submit #top-menu .navbar-collapse #language .pushbutton-wide,
 .mx-1 {
   margin-left: 0.25rem !important; }
 
@@ -5852,6 +5995,8 @@ article .card-body #comments .comment-reply-link,
 #comments article .card-body .comment-reply-link,
 article .card-body #comments #cancel-comment-reply-link,
 #comments article .card-body #cancel-comment-reply-link,
+article .card-body .contact-form .contact-submit .pushbutton-wide,
+.contact-form .contact-submit article .card-body .pushbutton-wide,
 article .card-img-overlay .btn,
 article .card-img-overlay #commentform .submit,
 #commentform article .card-img-overlay .submit,
@@ -5859,6 +6004,8 @@ article .card-img-overlay #comments .comment-reply-link,
 #comments article .card-img-overlay .comment-reply-link,
 article .card-img-overlay #comments #cancel-comment-reply-link,
 #comments article .card-img-overlay #cancel-comment-reply-link,
+article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
+.contact-form .contact-submit article .card-img-overlay .pushbutton-wide,
 #related-posts {
   margin-top: 1rem !important; }
 
@@ -5867,7 +6014,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 #featured-widget-area .card {
   margin-right: 1rem !important; }
 
-.mb-3, .gallery .gallery-item, #featured-widget-area .front-page-widget, #featured-widget-area.template-jumbotron .front-page-widget .widget-thumbnail, #featured-widget-area.template-features .widget-thumbnail, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer,
+.mb-3, .gallery .gallery-item, #featured-widget-area .front-page-widget, #featured-widget-area.template-jumbotron .front-page-widget .widget-thumbnail, #featured-widget-area.template-features .widget-thumbnail, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5,
 .my-3,
 #header #static-header #static-header-image,
 #header #static-header #static-header-text,
@@ -5879,6 +6026,8 @@ article .card-body #comments .comment-reply-link,
 #comments article .card-body .comment-reply-link,
 article .card-body #comments #cancel-comment-reply-link,
 #comments article .card-body #cancel-comment-reply-link,
+article .card-body .contact-form .contact-submit .pushbutton-wide,
+.contact-form .contact-submit article .card-body .pushbutton-wide,
 article .card-img-overlay .btn,
 article .card-img-overlay #commentform .submit,
 #commentform article .card-img-overlay .submit,
@@ -5886,6 +6035,8 @@ article .card-img-overlay #comments .comment-reply-link,
 #comments article .card-img-overlay .comment-reply-link,
 article .card-img-overlay #comments #cancel-comment-reply-link,
 #comments article .card-img-overlay #cancel-comment-reply-link,
+article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
+.contact-form .contact-submit article .card-img-overlay .pushbutton-wide,
 #related-posts {
   margin-bottom: 1rem !important; }
 
@@ -5916,7 +6067,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .m-5 {
   margin: 3rem !important; }
 
-.mt-5, article .author-info,
+.mt-5, article .author-info, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5,
 .my-5,
 #maintenance-mode {
   margin-top: 3rem !important; }
@@ -6050,7 +6201,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 
 .p-0, #header #header-image .container-fluid, #header #slider-carousel.container-fluid, #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
 #top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
-#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link, #colophon {
+#comments #top-menu .navbar-collapse #language #cancel-comment-reply-link, #top-menu .navbar-collapse #language .contact-form .contact-submit .pushbutton-wide, .contact-form .contact-submit #top-menu .navbar-collapse #language .pushbutton-wide, #colophon {
   padding: 0 !important; }
 
 .pt-0,
@@ -6301,7 +6452,8 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 #comments-navigation.nav .post-previous,
 #comments-navigation.nav .comments-previous,
 .mx-auto,
-.aligncenter {
+.aligncenter,
+.contact-form {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -6312,7 +6464,8 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 #comments-navigation.nav .post-next,
 #comments-navigation.nav .comments-next, #top-menu .navbar-nav,
 .mx-auto,
-.aligncenter {
+.aligncenter,
+.contact-form {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -8236,7 +8389,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   text-align: right !important; }
 
 .text-center, #site-pagination.prev-next a, #posts-navigation.nav a,
-#comments-navigation.nav a, #site-info, #call_action_one .call-action-wrapper, #call_action_two .call-action-wrapper, .page article header, .single article header, .page-template .featured-header header, #featured-widget-area, #footer * {
+#comments-navigation.nav a, #site-info, #call_action_one .call-action-wrapper, #call_action_two .call-action-wrapper, #featured-widget-area, .page article header, .single article header, .page article h1, .page article h2, .page article h3, .page article h4, .page article h5, .single article h1, .single article h2, .single article h3, .single article h4, .single article h5, .page-template .featured-header header, #footer * {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -8278,7 +8431,8 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .text-lowercase {
   text-transform: lowercase !important; }
 
-.text-uppercase, #top-menu .navbar .nav-link, #top-menu .navbar #site-pagination.prev-next a, #site-pagination.prev-next #top-menu .navbar a, #top-menu .navbar #posts-navigation.nav a, #posts-navigation.nav #top-menu .navbar a,
+.text-uppercase, .btn, #commentform .submit, #comments .comment-reply-link,
+#comments #cancel-comment-reply-link, .contact-form .contact-submit .pushbutton-wide, #top-menu .navbar .nav-link, #top-menu .navbar #site-pagination.prev-next a, #site-pagination.prev-next #top-menu .navbar a, #top-menu .navbar #posts-navigation.nav a, #posts-navigation.nav #top-menu .navbar a,
 #top-menu .navbar #comments-navigation.nav a,
 #comments-navigation.nav #top-menu .navbar a {
   text-transform: uppercase !important; }
@@ -10060,13 +10214,16 @@ article.sticky {
   margin-top: -1rem; }
   #top-menu .navbar-collapse #language .btn, #top-menu .navbar-collapse #language #commentform .submit, #commentform #top-menu .navbar-collapse #language .submit, #top-menu .navbar-collapse #language #comments .comment-reply-link, #comments #top-menu .navbar-collapse #language .comment-reply-link,
   #top-menu .navbar-collapse #language #comments #cancel-comment-reply-link,
-  #comments #top-menu .navbar-collapse #language #cancel-comment-reply-link {
+  #comments #top-menu .navbar-collapse #language #cancel-comment-reply-link, #top-menu .navbar-collapse #language .contact-form .contact-submit .pushbutton-wide, .contact-form .contact-submit #top-menu .navbar-collapse #language .pushbutton-wide {
     font-size: 75%; }
 
 #call_action_one {
   background-size: contain;
   background-position: right;
   margin-top: -8rem; }
+
+.contact-form > div textarea {
+  height: 250px; }
 
 #footer {
   background-image: linear-gradient(to right, #28a745 0%, #17a2b8 100%);

@@ -42,10 +42,20 @@ function wyvf_front_page_program(){
 	<section id="program" class="program my-5 py-5">
 		<div class="<?php echo t_em_container() ?>">
 			<div class="row">
-			<?php foreach ( $programs as $program ) : ?>
-				<div class="program-item mb-5 <?php echo t_em_grid( 6 ) ?>">
-					<h4 class="program-title"><?php echo $program->post_title ?></h4>
-					<div class="program-body"><?php t_em_get_post_excerpt( $program->ID ) ?></div>
+			<?php foreach ( $programs as $program ) :
+					$date = explode( ' ', get_the_date( 'd M Y', $program->ID ) );
+			?>
+				<div class="program-item mb-5 media <?php echo t_em_grid( 6 ) ?>">
+					<div class="d-flex text-center text-light bg-success p-2 mr-3">
+						<time>
+							<span class="day h2 d-block font-weight-bold"><?php echo $date[0] ?></span>
+							<span class="month h5 d-block font-weight-bold text-uppercase"><?php echo $date[1] ?></span>
+						</time>
+					</div>
+					<div class="media-body">
+						<h4 class="program-title"><a href="<?php echo get_permalink( $program->ID ) ?>"><?php echo $program->post_title ?></a></h4>
+						<div class="program-body"><?php t_em_get_post_excerpt( $program->ID ) ?></div>
+					</div>
 				</div>
 			<?php endforeach; ?>
 				<div class="<?php echo t_em_grid( 12 ) ?> text-center"><a href="<?php echo get_post_type_archive_link( 'wyvf-program' ) ?>" class="btn btn-primary"><?php _e( 'All Program' ) ?></a></div>

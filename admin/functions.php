@@ -89,6 +89,9 @@ add_action( 't_em_admin_action_from_page_option_widgets-front-page_before', 'wyv
 function wyvf_default_theme_options( $default_theme_options ){
 	$wyvf_default_options = array(
 		'front_page_witgets_headline'	=> '',
+		'contact_email'					=> '',
+		'contact_phone'					=> '',
+		'contact_address'				=> '',
 	);
 
 	// Get custom pages from the original function
@@ -126,6 +129,9 @@ function wyvf_theme_options_validate( $input ){
 	// Text inputs
 	foreach ( array(
 		'front_page_witgets_headline',
+		'contact_email',
+		'contact_phone',
+		'contact_address',
 	) as $text_field ) :
 		$input[$text_field] = ( isset( $input[$text_field] ) ) ? trim( $input[$text_field] ) : '';
 	endforeach;
