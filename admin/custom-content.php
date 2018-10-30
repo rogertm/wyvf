@@ -44,6 +44,14 @@ function wyvf_custom_pages(){
 			'type'			=> 'page',
 			'post_type'		=> 'wyvf-faq',
 		),
+		'page_register'	=> array(
+			'value'			=> 'page_register',
+			'label'			=> __( 'Page Register', 'wyvf' ),
+			'public_label'	=> __( 'Register', 'wyvf' ),
+			'user_menu'		=> '',
+			'type'			=> 'page',
+			'post_type'		=> 'wyvf-faq',
+		),
 		'page_program'	=> array(
 			'value'			=> 'page_program',
 			'label'			=> __( 'Page Program', 'wyvf' ),

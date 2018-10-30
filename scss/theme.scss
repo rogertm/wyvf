@@ -9,8 +9,20 @@
 //
 // Scaffolding
 //
+html{
+	font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
 .btn{
 	@extend .text-uppercase;
+	@extend .font-weight-bold;
+}
+.btn{
+	@extend .shadow;
+}
+.font-sans-serif{
+	font-family: $font-family-sans-serif;
 }
 
 //
@@ -22,10 +34,16 @@
 		@extend .navbar-light;
 		@extend .bg-white;
 		.nav-link{
-			@extend .text-primary;
+			@extend .text-secondary;
 			@extend .text-uppercase;
 			@extend .font-weight-bold;
 			@extend .small;
+		}
+		.menu-item:hover,
+		.active{
+			.nav-link{
+				@extend .text-primary;
+			}
 		}
 		&-nav{
 			@extend .ml-auto;
@@ -65,32 +83,45 @@
 		@extend .py-10;
 		@extend .px-5;
 		@extend .mb-10;
-		@extend .shadow-lg;
+		@extend .shadow;
+		@include media-breakpoint-down(md){
+			background-position: top;
+			background-size: auto;
+			padding-bottom: 5rem !important;
+		}
 		.call-action{
 			&-wrapper{
 				@extend .text-body;
 				@extend .w-50;
 				@extend .text-center;
+				@include media-breakpoint-down(md){
+					width: 100% !important;
+					margin-top: 18rem;
+				}
 			}
 			&-headline{
 				@extend .h1;
 			}
 			&-body{
 				@extend .lead;
+				@extend .font-weight-bold;
 			}
 		}
 	}
 	&_two{
 		@extend .py-6;
+		@extend .bg-primary;
+		background-blend-mode: multiply;
 		.call-action{
 			&-wrapper{
 				@extend .container;
 				@extend .text-center;
-				@extend .text-body;
+				@extend .text-light;
 				@extend .font-weight-bold;
 			}
 			&-body{
 				@extend .lead;
+				@extend .font-weight-bold;
 			}
 		}
 	}
@@ -130,7 +161,7 @@
 				@extend .border-0;
 			}
 		}
-		h1, h2, h3, h4, h5, h6{
+		h2, h3, h4, h5, h6{
 			&:not(.program-title){
 				@extend .text-center;
 				@extend .border-bottom;
@@ -150,6 +181,41 @@
 }
 
 //
+// Programs
+//
+.program{
+	&-item{
+		@extend .position-relative;
+		@extend .pb-4;
+		&:after{
+			@extend .position-absolute;
+			bottom: 0;
+			right: 1rem;
+			left: 5rem;
+			content: "";
+			height: 1px;
+			@extend .bg-green;
+		}
+	}
+	&-title{
+		a{
+			&:hover{
+				@extend .text-green;
+			}
+		}
+	}
+}
+
+//
+// FAQs
+//
+.faq{
+	&-title{
+		text-transform: none !important;
+	}
+}
+
+//
 // JetPack Contact Form
 //
 .contact-form{
@@ -157,13 +223,28 @@
 	@extend .mx-auto;
 	> div{
 		@extend .form-group;
-		input, textarea{
+		input, textarea, select{
 			@extend .form-control;
 			@extend .w-100;
 			@extend .mw-100;
 		}
+		input[type="radio"],
+		input[type="checkbox"]{
+			@extend .w-auto;
+			@extend .float-left;
+			@extend .mb-1;
+			@extend .mr-3;
+			margin-top: -6px;
+		}
 		textarea{
 			height: 250px;
+		}
+	}
+	label{
+		@extend .mb-3;
+		&.checkbox,
+		&.radio{
+			@extend .d-block;
 		}
 	}
 	.contact-submit{
@@ -183,6 +264,8 @@
 		@extend .text-white;
 		@extend .text-center;
 	}
+	@extend .pt-4;
+	@extend .pb-3;
 }
 #colophon{
 	@extend .p-0;

@@ -3,9 +3,25 @@
 // Your variable overrides
 $icomoon-font-path: 		"../../twenty-em/node_modules/@themingisprose/icon-pack/fonts";
 
+// Grid containers
+$container-max-widths: (
+	xl: 1400px
+);
+
 // Fonts
-$font-family-sans-serif:	"PT Sans Narrow", sans-serif;
-$headings-font-family:		"Vollkorn", sans-serif;
+$font-family-sans-serif:	"Lato", sans-serif;
+$headings-font-family:		"Volkhov", sans-serif;
+
+// Colors
+$theme-colors: (
+	"primary": #009ab8,
+	"success": #72b445,
+	"green": #39a77f
+);
+$link-color:				#495057;
+
+// Links
+$link-hover-decoration:		none;
 
 // Spacers
 $spacer:					1rem;
