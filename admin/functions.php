@@ -56,6 +56,47 @@ function wyvf_front_page_witgets_templates( $templates = '' ){
 add_filter( 't_em_admin_filter_front_page_witgets_templates', 'wyvf_front_page_witgets_templates' );
 
 /**
+ * Layouts template
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_layout_options( $template = '' ){
+	unset( $template['two-columns-content-left'] );
+	unset( $template['two-columns-content-right'] );
+	unset( $template['three-columns-content-left'] );
+	unset( $template['three-columns-content-right'] );
+	unset( $template['three-columns-content-middle'] );
+	return $template;
+}
+add_filter( 't_em_admin_filter_layout_options', 'wyvf_layout_options' );
+
+/**
+ * Footer template
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_footer_options( $template = '' ){
+	unset( $template['four-footer-widget'] );
+	unset( $template['three-footer-widget'] );
+	unset( $template['two-footer-widget'] );
+	unset( $template['one-footer-widget'] );
+	return $template;
+}
+add_filter( 't_em_admin_filter_footer_options', 'wyvf_footer_options' );
+
+/**
+ * Call to Actions template
+ *
+ * @since WYVF 1.0
+ */
+function wyvf_call_actions_options( $template = '' ){
+	unset( $template['call_action_three'] );
+	unset( $template['call_action_four'] );
+	return $template;
+}
+add_filter( 't_em_admin_filter_call_actions_options', 'wyvf_call_actions_options' );
+
+/**
  * Add a headline to front page witgets
  *
  * @since WYVF 1.0
