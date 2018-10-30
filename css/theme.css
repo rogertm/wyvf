@@ -5995,7 +5995,7 @@ button.program-item:focus:after {
 #comments-navigation.nav a, .contact-form > div input, .contact-form > div textarea, .contact-form > div select {
   width: 100% !important; }
 
-.w-auto, .contact-form > div input[type="radio"],
+.w-auto, #featured-widget-area .card-img-top, .contact-form > div input[type="radio"],
 .contact-form > div input[type="checkbox"] {
   width: auto !important; }
 
@@ -6312,8 +6312,7 @@ article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
   padding-top: 0 !important; }
 
 .pr-0,
-.px-0,
-#featured-widget-area .card-body {
+.px-0 {
   padding-right: 0 !important; }
 
 .pb-0,
@@ -6321,8 +6320,7 @@ article .card-img-overlay .contact-form .contact-submit .pushbutton-wide,
   padding-bottom: 0 !important; }
 
 .pl-0,
-.px-0,
-#featured-widget-area .card-body {
+.px-0 {
   padding-left: 0 !important; }
 
 .p-1, .page-links .page-number, #maintenance-mode-alert {

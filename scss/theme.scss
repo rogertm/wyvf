@@ -143,8 +143,8 @@ h1, h2, h3, h4, h5, h6,
 		@extend .border-top-0;
 		@extend .border-left-0;
 		@extend .border-right-0;
-		&-body{
-			@extend .px-0;
+		&-img-top{
+			@extend .w-auto;
 		}
 	}
 }
